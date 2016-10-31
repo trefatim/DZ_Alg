@@ -1,0 +1,27 @@
+add 103 104
+add 84 39
+add 110 25
+add 101 47
+add 99 34
+add 122 121
+add 11 43
+add 24 30
+add 90 42
+add 30 89
+add 82 46
+add 20 78
+add 92 38
+add 78 35
+add 99 11
+add 109 24
+add 100 83
+add 54 61
+add 72 44
+add 75 80
+add 113 84
+add 85 12
+add 103 86
+print
+search 2311
+search 24
+search 109

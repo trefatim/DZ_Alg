@@ -1,0 +1,48 @@
+line of spaces or tabulations
+
+line of spaces or tabulations
+
+wrong command: ¹*?("
+
+wrong key/value in command add
+
+wrong parameters in command delete
+
+element with key 234 wasn't found to be deleted from hash table
+element with key 234 wasn't found to be deleted from sorted array
+element with key 234 wasn't found to be deleted from binary search tree
+
+there's no any elements in hash table;
+there's no any elements in sorted array;
+there's no any elements in binary search tree;
+
+empty line
+
+empty line
+
+empty line
+
+wrong key in command search
+
+there's no any elements in hash table;
+there's no any elements in sorted array;
+there's no any elements in binary search tree;
+
+Hash table structure:
+NULL
+NULL
+NULL
+NULL
+NULL
+NULL
+NULL
+NULL
+NULL
+NULL
+
+Sorted array structure:
+there's no any elements
+Binary search tree structure:
+there's no elements
+wrong command: no
+
