@@ -1,0 +1,188 @@
+element (103, 104) was added to hash table over 232 ns
+element (103, 104) was added to sorted array over 210 ns
+element (103, 104) was added to binary search tree over 197 ns
+
+element (84, 39) was added to hash table over 207 ns
+element (84, 39) was added to sorted array over 280 ns
+element (84, 39) was added to binary search tree over 313 ns
+
+element (110, 25) was added to hash table over 207 ns
+element (110, 25) was added to sorted array over 308 ns
+element (110, 25) was added to binary search tree over 317 ns
+
+element (101, 47) was added to hash table over 209 ns
+element (101, 47) was added to sorted array over 318 ns
+element (101, 47) was added to binary search tree over 384 ns
+
+element (99, 34) was added to hash table over 205 ns
+element (99, 34) was added to sorted array over 328 ns
+element (99, 34) was added to binary search tree over 448 ns
+
+element (122, 121) was added to hash table over 209 ns
+element (122, 121) was added to sorted array over 396 ns
+element (122, 121) was added to binary search tree over 389 ns
+
+element (11, 43) was added to hash table over 225 ns
+element (11, 43) was added to sorted array over 389 ns
+element (11, 43) was added to binary search tree over 393 ns
+
+element (24, 30) was added to hash table over 227 ns
+element (24, 30) was added to sorted array over 434 ns
+element (24, 30) was added to binary search tree over 452 ns
+
+element (90, 42) was added to hash table over 225 ns
+element (90, 42) was added to sorted array over 336 ns
+element (90, 42) was added to binary search tree over 522 ns
+
+element (30, 89) was added to hash table over 229 ns
+element (30, 89) was added to sorted array over 433 ns
+element (30, 89) was added to binary search tree over 536 ns
+
+element (82, 46) was added to hash table over 229 ns
+element (82, 46) was added to sorted array over 528 ns
+element (82, 46) was added to binary search tree over 588 ns
+
+element (20, 78) was added to hash table over 229 ns
+element (20, 78) was added to sorted array over 534 ns
+element (20, 78) was added to binary search tree over 518 ns
+
+element (92, 38) was added to hash table over 227 ns
+element (92, 38) was added to sorted array over 523 ns
+element (92, 38) was added to binary search tree over 589 ns
+
+element (78, 35) was added to hash table over 205 ns
+element (78, 35) was added to sorted array over 529 ns
+element (78, 35) was added to binary search tree over 656 ns
+
+element (99, 11) was added to hash table over 233 ns
+element (99, 11) was added to sorted array over 605 ns
+element (99, 11) was added to binary search tree over 522 ns
+
+element (109, 24) was added to hash table over 228 ns
+element (109, 24) was added to sorted array over 509 ns
+element (109, 24) was added to binary search tree over 386 ns
+
+element (100, 83) was added to hash table over 228 ns
+element (100, 83) was added to sorted array over 424 ns
+element (100, 83) was added to binary search tree over 584 ns
+
+element (54, 61) was added to hash table over 228 ns
+element (54, 61) was added to sorted array over 457 ns
+element (54, 61) was added to binary search tree over 732 ns
+
+element (72, 44) was added to hash table over 227 ns
+element (72, 44) was added to sorted array over 556 ns
+element (72, 44) was added to binary search tree over 790 ns
+
+element (75, 80) was added to hash table over 208 ns
+element (75, 80) was added to sorted array over 548 ns
+element (75, 80) was added to binary search tree over 858 ns
+
+element (113, 84) was added to hash table over 228 ns
+element (113, 84) was added to sorted array over 594 ns
+element (113, 84) was added to binary search tree over 448 ns
+
+element (85, 12) was added to hash table over 228 ns
+element (85, 12) was added to sorted array over 353 ns
+element (85, 12) was added to binary search tree over 587 ns
+
+element (103, 86) was added to hash table over 225 ns
+element (103, 86) was added to sorted array over 613 ns
+element (103, 86) was added to binary search tree over 451 ns
+
+Hash table structure:
+(100,83)->(20,78)->(30,89)->(90,42)->(110,25)->NULL
+(11,43)->(101,47)->NULL
+(72,44)->(92,38)->(82,46)->(122,121)->NULL
+(103,86)->(113,84)->(103,104)->NULL
+(54,61)->(24,30)->(84,39)->NULL
+(85,12)->(75,80)->NULL
+NULL
+NULL
+(78,35)->NULL
+(109,24)->(99,11)->(99,34)->NULL
+
+Sorted array structure:
+(11,43) (20,78) (24,30) (30,89) (54,61) (72,44) (75,80) (78,35) (82,46) (84,39) (85,12) (90,42) (92,38) (99,11) (99,34) (100,83) (101,47) (103,86) (103,104) (109,24) (110,25) (113,84) (122,121) 
+
+Binary search tree structure:
+103-86(Left:84, Right:110); 84-39(Left:11, Right:101); 110-25(Left:109, Right:122); 11-43(Left:NULL, Right:24); 101-47(Left:99, Right:NULL); 109-24(Left:103, Right:NULL); 122-121(Left:113, Right:NULL); 24-30(Left:20, Right:30); 99-11(Left:90, Right:99); 103-86(Left:NULL, Right:NULL); 
+113-84(Left:NULL, Right:NULL); 20-78(Left:NULL, Right:NULL); 30-89(Left:NULL, Right:82); 90-42(Left:85, Right:92); 99-11(Left:NULL, Right:100); 82-46(Left:78, Right:NULL); 85-12(Left:NULL, Right:NULL); 92-38(Left:NULL, Right:NULL); 100-83(Left:NULL, Right:NULL); 78-35(Left:54, Right:NULL); 
+54-61(Left:NULL, Right:72); 72-44(Left:NULL, Right:75); 75-80(Left:NULL, Right:NULL); 
+
+element with key 123 wasn't found to be deleted from hash table
+element with key 123 wasn't found to be deleted from sorted array
+element with key 123 wasn't found to be deleted from binary search tree
+
+element with key 24 was deleted from hash table over 325 ns
+element with key 24 was deleted from sorted array over 379 ns
+element with key 24 was deleted from binary search tree over 862 ns
+
+Hash table structure:
+(100,83)->(20,78)->(30,89)->(90,42)->(110,25)->NULL
+(11,43)->(101,47)->NULL
+(72,44)->(92,38)->(82,46)->(122,121)->NULL
+(103,86)->(113,84)->(103,104)->NULL
+(54,61)->(84,39)->NULL
+(85,12)->(75,80)->NULL
+NULL
+NULL
+(78,35)->NULL
+(109,24)->(99,11)->(99,34)->NULL
+
+Sorted array structure:
+(11,43) (20,78) (30,89) (54,61) (72,44) (75,80) (78,35) (82,46) (84,39) (85,12) (90,42) (92,38) (99,11) (99,34) (100,83) (101,47) (103,86) (103,104) (109,24) (110,25) (113,84) (122,121) 
+
+Binary search tree structure:
+103-86(Left:84, Right:110); 84-39(Left:11, Right:101); 110-25(Left:109, Right:122); 11-43(Left:NULL, Right:30); 101-47(Left:99, Right:NULL); 109-24(Left:103, Right:NULL); 122-121(Left:113, Right:NULL); 30-89(Left:20, Right:82); 99-11(Left:90, Right:99); 103-86(Left:NULL, Right:NULL); 
+113-84(Left:NULL, Right:NULL); 20-78(Left:NULL, Right:NULL); 82-46(Left:78, Right:NULL); 90-42(Left:85, Right:92); 99-11(Left:NULL, Right:100); 78-35(Left:54, Right:NULL); 85-12(Left:NULL, Right:NULL); 92-38(Left:NULL, Right:NULL); 100-83(Left:NULL, Right:NULL); 54-61(Left:NULL, Right:72); 
+72-44(Left:NULL, Right:75); 75-80(Left:NULL, Right:NULL); 
+
+element with key 75 was deleted from hash table over 328 ns
+element with key 75 was deleted from sorted array over 446 ns
+element with key 75 was deleted from binary search tree over 958 ns
+
+Hash table structure:
+(100,83)->(20,78)->(30,89)->(90,42)->(110,25)->NULL
+(11,43)->(101,47)->NULL
+(72,44)->(92,38)->(82,46)->(122,121)->NULL
+(103,86)->(113,84)->(103,104)->NULL
+(54,61)->(84,39)->NULL
+(85,12)->NULL
+NULL
+NULL
+(78,35)->NULL
+(109,24)->(99,11)->(99,34)->NULL
+
+Sorted array structure:
+(11,43) (20,78) (30,89) (54,61) (72,44) (78,35) (82,46) (84,39) (85,12) (90,42) (92,38) (99,11) (99,34) (100,83) (101,47) (103,86) (103,104) (109,24) (110,25) (113,84) (122,121) 
+
+Binary search tree structure:
+103-86(Left:84, Right:110); 84-39(Left:11, Right:101); 110-25(Left:109, Right:122); 11-43(Left:NULL, Right:30); 101-47(Left:99, Right:NULL); 109-24(Left:103, Right:NULL); 122-121(Left:113, Right:NULL); 30-89(Left:20, Right:82); 99-11(Left:90, Right:99); 103-86(Left:NULL, Right:NULL); 
+113-84(Left:NULL, Right:NULL); 20-78(Left:NULL, Right:NULL); 82-46(Left:78, Right:NULL); 90-42(Left:85, Right:92); 99-11(Left:NULL, Right:100); 78-35(Left:54, Right:NULL); 85-12(Left:NULL, Right:NULL); 92-38(Left:NULL, Right:NULL); 100-83(Left:NULL, Right:NULL); 54-61(Left:NULL, Right:72); 
+72-44(Left:NULL, Right:NULL); 
+
+element with key 11 was deleted from hash table over 253 ns
+element with key 11 was deleted from sorted array over 452 ns
+element with key 11 was deleted from binary search tree over 627 ns
+
+Hash table structure:
+(100,83)->(20,78)->(30,89)->(90,42)->(110,25)->NULL
+(101,47)->NULL
+(72,44)->(92,38)->(82,46)->(122,121)->NULL
+(103,86)->(113,84)->(103,104)->NULL
+(54,61)->(84,39)->NULL
+(85,12)->NULL
+NULL
+NULL
+(78,35)->NULL
+(109,24)->(99,11)->(99,34)->NULL
+
+Sorted array structure:
+(20,78) (30,89) (54,61) (72,44) (78,35) (82,46) (84,39) (85,12) (90,42) (92,38) (99,11) (99,34) (100,83) (101,47) (103,86) (103,104) (109,24) (110,25) (113,84) (122,121) 
+
+Binary search tree structure:
+103-86(Left:84, Right:110); 84-39(Left:30, Right:101); 110-25(Left:109, Right:122); 30-89(Left:20, Right:82); 101-47(Left:99, Right:NULL); 109-24(Left:103, Right:NULL); 122-121(Left:113, Right:NULL); 20-78(Left:NULL, Right:NULL); 82-46(Left:78, Right:NULL); 99-11(Left:90, Right:99); 
+103-86(Left:NULL, Right:NULL); 113-84(Left:NULL, Right:NULL); 78-35(Left:54, Right:NULL); 90-42(Left:85, Right:92); 99-11(Left:NULL, Right:100); 54-61(Left:NULL, Right:72); 85-12(Left:NULL, Right:NULL); 92-38(Left:NULL, Right:NULL); 100-83(Left:NULL, Right:NULL); 72-44(Left:NULL, Right:NULL); 
+
+
