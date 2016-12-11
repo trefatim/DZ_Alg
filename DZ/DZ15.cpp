@@ -55,9 +55,7 @@ int main(int argc, char* argv[])
 	Element* sa_element;
 	BinarySearchTreeElement* bst_element;
 
-	//__int64 start, end, tps;
 	int result_time = 0;
-	//QueryPerformanceFrequency((LARGE_INTEGER *)&tps);
 
 	int element_key, element_value;
 	string command, command_part;
@@ -103,7 +101,6 @@ int main(int argc, char* argv[])
 							fout << "element (" << element_key << ", " << element_value << ") was added to hash table over " << (result_time) / 100000 << " ns" << endl;
 							result_time = 0;
 
-							//QueryPerformanceCounter((LARGE_INTEGER *)&start);
 							for (int i = 0; i < 100000; ++i) {
 								auto start1 = std::chrono::high_resolution_clock::now();
 								sorted_array->AddElement(*sa_element);
@@ -112,11 +109,9 @@ int main(int argc, char* argv[])
 								sorted_array->DeleteElement(sa_element->GetKey());
 							}
 							sorted_array->AddElement(*sa_element);
-							//QueryPerformanceCounter((LARGE_INTEGER *)&end);
 							fout << "element (" << element_key << ", " << element_value << ") was added to sorted array over " << (result_time) / 100000 << " ns" << endl;
 							result_time = 0;
 
-							//QueryPerformanceCounter((LARGE_INTEGER *)&start);
 							for (int i = 0; i < 100000; ++i) {
 								auto start1 = std::chrono::high_resolution_clock::now();
 								binary_search_tree->AddElement(*bst_element);
@@ -125,7 +120,6 @@ int main(int argc, char* argv[])
 								binary_search_tree->DeleteElement(bst_element->GetKey());
 							}
 							binary_search_tree->AddElement(*bst_element);
-							//QueryPerformanceCounter((LARGE_INTEGER *)&end);
 							fout << "element (" << element_key << ", " << element_value << ") was added to binary search tree over " << (result_time) / 100000 << " ns" << endl;
 							fout << endl;
 							result_time = 0;
@@ -146,11 +140,9 @@ int main(int argc, char* argv[])
 					if (command_array.size() == 1) {
 						if (IsInt(p[0])) {
 							element_key = StringToInt(p[0]);
-							//QueryPerformanceCounter((LARGE_INTEGER *)&start);
 							HashTable* ht_copy = hash_table->GetHashTableCopy();
 							HashTable* ht_temp;
 							if (hash_table->DeleteElement(element_key)) {
-								//QueryPerformanceCounter((LARGE_INTEGER *)&end);
 								for (int i = 0; i < 100000; ++i) {
 									ht_temp = ht_copy->GetHashTableCopy();
 									auto start1 = std::chrono::high_resolution_clock::now();
@@ -166,11 +158,9 @@ int main(int argc, char* argv[])
 							else
 								fout << "element with key " << element_key << " wasn't found to be deleted from hash table" << endl;
 
-							//QueryPerformanceCounter((LARGE_INTEGER *)&start);
 							SortedArray* sa_copy = sorted_array->GetArrayCopy();
 							SortedArray* sa_temp;
 							if (sorted_array->DeleteElement(element_key)) {
-								//QueryPerformanceCounter((LARGE_INTEGER *)&end);
 								for (int i = 0; i < 100000; ++i) {
 									sa_temp = sa_copy->GetArrayCopy();
 									auto start1 = std::chrono::high_resolution_clock::now();
@@ -186,11 +176,9 @@ int main(int argc, char* argv[])
 							else
 								fout << "element with key " << element_key << " wasn't found to be deleted from sorted array" << endl;
 
-							//QueryPerformanceCounter((LARGE_INTEGER *)&start);
 							BinarySearchTree* bst_copy = binary_search_tree->GetTreeCopy();
 							BinarySearchTree* bst_temp;
 							if (binary_search_tree->DeleteElement(element_key)) {
-								//QueryPerformanceCounter((LARGE_INTEGER *)&end);
 								for (int i = 0; i < 100000; ++i) {
 									bst_temp = bst_copy->GetTreeCopy();
 									auto start1 = std::chrono::high_resolution_clock::now();
@@ -223,9 +211,7 @@ int main(int argc, char* argv[])
 					if (command_array.size() == 1) {
 						if (IsInt(p[0])) {
 							element_key = StringToInt(p[0]);
-							//QueryPerformanceCounter((LARGE_INTEGER *)&start);
 							ht_element = hash_table->SearchElement(element_key);
-							//QueryPerformanceCounter((LARGE_INTEGER *)&end);
 							if (ht_element) {
 								for (int i = 0; i < 100000; ++i) {
 									auto start1 = std::chrono::high_resolution_clock::now();
@@ -242,9 +228,7 @@ int main(int argc, char* argv[])
 								fout << endl;
 							}
 
-							//QueryPerformanceCounter((LARGE_INTEGER *)&start);
 							sa_element = sorted_array->SearchElement(element_key);
-							//QueryPerformanceCounter((LARGE_INTEGER *)&end);
 							if (sa_element) {
 								for (int i = 0; i < 100000; ++i) {
 									auto start1 = std::chrono::high_resolution_clock::now();
@@ -261,9 +245,7 @@ int main(int argc, char* argv[])
 								fout << endl;
 							}
 
-							//QueryPerformanceCounter((LARGE_INTEGER *)&start);
 							bst_element = binary_search_tree->SearchElement(element_key);
-							//QueryPerformanceCounter((LARGE_INTEGER *)&end);
 							if (bst_element) {
 								for (int i = 0; i < 100000; ++i) {
 									auto start1 = std::chrono::high_resolution_clock::now();
@@ -293,9 +275,7 @@ int main(int argc, char* argv[])
 				}
 				else if (command_array.front() == "min") {
 					if (command_array.size() == 1) {
-						//QueryPerformanceCounter((LARGE_INTEGER *)&start);
 						ht_element = hash_table->GetMin();
-						//QueryPerformanceCounter((LARGE_INTEGER *)&end);
 						if (ht_element) {
 							for (int i = 0; i < 100000; ++i) {
 								auto start1 = std::chrono::high_resolution_clock::now();
@@ -309,9 +289,7 @@ int main(int argc, char* argv[])
 						else
 							fout << "there's no any elements in hash table;" << endl;
 
-						//QueryPerformanceCounter((LARGE_INTEGER *)&start);
 						sa_element = sorted_array->GetMin();
-						//QueryPerformanceCounter((LARGE_INTEGER *)&end);
 						if (sa_element) {
 							for (int i = 0; i < 100000; ++i) {
 								auto start1 = std::chrono::high_resolution_clock::now();
@@ -325,9 +303,7 @@ int main(int argc, char* argv[])
 						else
 							fout << "there's no any elements in sorted array;" << endl;
 
-						//QueryPerformanceCounter((LARGE_INTEGER *)&start);
 						bst_element = binary_search_tree->GetMin();
-						//QueryPerformanceCounter((LARGE_INTEGER *)&end);
 						if (bst_element) {
 							for (int i = 0; i < 100000; ++i) {
 								auto start1 = std::chrono::high_resolution_clock::now();
@@ -349,9 +325,7 @@ int main(int argc, char* argv[])
 				}
 				else if (command_array.front() == "max") {
 					if (command_array.size() == 1) {
-						//QueryPerformanceCounter((LARGE_INTEGER *)&start);
 						ht_element = hash_table->GetMax();
-						//QueryPerformanceCounter((LARGE_INTEGER *)&end);
 						if (ht_element) {
 							for (int i = 0; i < 100000; ++i) {
 								auto start1 = std::chrono::high_resolution_clock::now();
@@ -365,9 +339,7 @@ int main(int argc, char* argv[])
 						else
 							fout << "there's no any elements in hash table;" << endl;
 
-						//QueryPerformanceCounter((LARGE_INTEGER *)&start);
 						sa_element = sorted_array->GetMax();
-						//QueryPerformanceCounter((LARGE_INTEGER *)&end);
 						if (sa_element) {
 							for (int i = 0; i < 100000; ++i) {
 								auto start1 = std::chrono::high_resolution_clock::now();
@@ -381,9 +353,7 @@ int main(int argc, char* argv[])
 						else
 							fout << "there's no any elements in sorted array;" << endl;
 
-						//QueryPerformanceCounter((LARGE_INTEGER *)&start);
 						bst_element = binary_search_tree->GetMax();
-						//QueryPerformanceCounter((LARGE_INTEGER *)&end);
 						if (bst_element) {
 							for (int i = 0; i < 100000; ++i) {
 								auto start1 = std::chrono::high_resolution_clock::now();
