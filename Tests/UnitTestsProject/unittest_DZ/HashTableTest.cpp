@@ -3,10 +3,12 @@
 void HashTableTest::SetUp() {
 	hash_table = new HashTable();
 	hash_table->AddElement(*(new HashTableElement(33, 43)));
+	hash_table->AddElement(*(new HashTableElement(46, 468)));
 	hash_table->AddElement(*(new HashTableElement(13, 212)));
-	hash_table->AddElement(*(new HashTableElement(53, 144)));
+	hash_table->AddElement(*(new HashTableElement(26, 144)));
 	hash_table->AddElement(*(new HashTableElement(73, 67)));
-	hash_table->AddElement(*(new HashTableElement(111, 113)));
+	hash_table->AddElement(*(new HashTableElement(112, 113)));
+	hash_table->AddElement(*(new HashTableElement(20, 113)));
 }
 
 void HashTableTest::TearDown() {
@@ -16,12 +18,12 @@ void HashTableTest::TearDown() {
 TEST_F(HashTableTest, AddInEmptyList) {
 	HashTable* table = new HashTable();
 	table->AddElement(*(new HashTableElement(36, 123)));
-	EXPECT_EQ(123, (*table)[6]->GetValue());
+	EXPECT_EQ(123, (*table)[10]->GetValue());
 }
 
 TEST_F(HashTableTest, AddTest) {
-	hash_table->AddElement(*(new HashTableElement(23, 123)));
-	EXPECT_EQ(123, (*hash_table)[3]->GetValue());
+	hash_table->AddElement(*(new HashTableElement(26, 123)));
+	EXPECT_EQ(123, (*hash_table)[0]->GetValue());
 }
 
 TEST_F(HashTableTest, DeleteFromEmptyList) {
@@ -33,10 +35,10 @@ TEST_F(HashTableTest, NotFoundToBeDeleted) {
 }
 
 TEST_F(HashTableTest, DeleteListHead) {
-	hash_table->DeleteElement(73);
-	int buf[3] = { 53, 13, 33 };
+	hash_table->DeleteElement(20);
+	int buf[3] = { 46, 33 };
 	int i = 0;
-	HashTableElement* element = (*hash_table)[3];
+	HashTableElement* element = (*hash_table)[7];
 	do {
 		EXPECT_EQ(buf[i], element->GetKey());
 		i++;
@@ -46,9 +48,9 @@ TEST_F(HashTableTest, DeleteListHead) {
 
 TEST_F(HashTableTest, DeleteListEnd) {
 	hash_table->DeleteElement(33);
-	int buf[3] = { 73, 53, 13 };
+	int buf[3] = { 20, 46 };
 	int i = 0;
-	HashTableElement* element = (*hash_table)[3];
+	HashTableElement* element = (*hash_table)[7];
 	do {
 		EXPECT_EQ(buf[i], element->GetKey());
 		i++;
@@ -57,10 +59,10 @@ TEST_F(HashTableTest, DeleteListEnd) {
 }
 
 TEST_F(HashTableTest, DeleteListMid) {
-	hash_table->DeleteElement(13);
-	int buf[3] = { 73, 53, 33 };
+	hash_table->DeleteElement(46);
+	int buf[3] = { 20, 33 };
 	int i = 0;
-	HashTableElement* element = (*hash_table)[3];
+	HashTableElement* element = (*hash_table)[7];
 	do {
 		EXPECT_EQ(buf[i], element->GetKey());
 		i++;
@@ -77,7 +79,7 @@ TEST_F(HashTableTest, SearchInEmptyList) {
 }
 
 TEST_F(HashTableTest, SearchInBeginList) {
-	EXPECT_EQ(67, (hash_table->SearchElement(73))->GetValue());
+	EXPECT_EQ(113, (hash_table->SearchElement(20))->GetValue());
 }
 
 TEST_F(HashTableTest, SearchInEndList) {
@@ -85,7 +87,7 @@ TEST_F(HashTableTest, SearchInEndList) {
 }
 
 TEST_F(HashTableTest, SearchInMidList) {
-	EXPECT_EQ(144, (hash_table->SearchElement(53))->GetValue());
+	EXPECT_EQ(468, (hash_table->SearchElement(46))->GetValue());
 }
 
 TEST_F(HashTableTest, SearchMinInEmptyTable) {

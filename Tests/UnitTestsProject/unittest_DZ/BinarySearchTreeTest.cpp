@@ -74,7 +74,7 @@ TEST_F(BinarySearchTreeTest, DeleteWithNoChildren) {
 	}
 }
 
-TEST_F(BinarySearchTreeTest, DeleteWithOneChildren) {
+TEST_F(BinarySearchTreeTest, DeleteWithOneChild) {
 	binary_search_tree->DeleteElement(56);
 	int buf[8] = { 100, 80, 310, 30, 84, 218, 418, 356 };
 	int i = 0;

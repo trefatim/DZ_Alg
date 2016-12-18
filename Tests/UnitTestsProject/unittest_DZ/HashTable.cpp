@@ -1,7 +1,7 @@
 #include "HashTable.h"
 #include <iostream>
 
-#define HashTableSize 10
+#define HashTableSize 13
 
 using namespace std;
 

@@ -1,7 +1,7 @@
 #include "HashTable.h"
 #include <iostream>
 
-#define HashTableSize 10
+#define HashTableSize 13
 
 using namespace std;
 
@@ -33,7 +33,6 @@ int HashTable::DeleteElement(int key) {
 	int index = HashFunction(key);
 	HashTableElement* temp = table[index];
 	if (!temp) {
-		//cout << "element not found" << endl;
 		return 0;
 	}
 	HashTableElement* prev = NULL;
@@ -55,7 +54,6 @@ HashTableElement* HashTable::SearchElement(int key) {
 	int index = HashFunction(key);
 	HashTableElement* temp = table[index];
 	if (!temp) {
-		cout << "element not found" << endl;
 		return NULL;
 	}
 	HashTableElement* prev = NULL;
@@ -81,7 +79,6 @@ HashTableElement* HashTable::GetMax() {
 		}
 	}
 	if (!buf) {
-		//cout << "there's no any elements" << endl;
 		return NULL;
 	}
 
@@ -112,7 +109,6 @@ HashTableElement* HashTable::GetMin() {
 		}
 	}
 	if (!buf) {
-		//cout << "there's no any elements" << endl;
 		return NULL;
 	}
 

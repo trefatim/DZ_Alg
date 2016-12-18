@@ -69,18 +69,22 @@ int BinarySearchTree::DeleteElement(int key) {
 				temp = temp->GetLeft();
 			buf = temp;
 		}
+
 		if (buf->GetLeft())
 			child = buf->GetLeft();
 		else
 			child = buf->GetRight();
+
 		if (child)
 			(child->GetParent())->SetParent(buf->GetParent());
+
 		if (!(buf->GetParent()))
 			root = child;
 		else if (buf == (buf->GetParent())->GetLeft())
 			(buf->GetParent())->SetLeft(child);
 		else
 			(buf->GetParent())->SetRight(child);
+
 		if (buf != element) {
 			element->SetKey(buf->GetKey());
 			element->SetValue(buf->GetValue());

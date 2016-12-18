@@ -46,6 +46,12 @@ void SortedArray::AddElement(Element& element) {
 		return;
 	}
 
+	if (element.GetKey() > sorted_array[size - 1].GetKey()) {
+		sorted_array[size] = element;
+		size++;
+		return;
+	}
+
 	int down = 0;
 	int up = size - 1;
 	int mid;

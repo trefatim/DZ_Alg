@@ -39,6 +39,9 @@ NULL
 NULL
 NULL
 NULL
+NULL
+NULL
+NULL
 
 Sorted array structure:
 there's no any elements
